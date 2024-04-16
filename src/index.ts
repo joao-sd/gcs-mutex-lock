@@ -37,6 +37,7 @@ export default class GcsMutexLock implements MutexLock {
   }: MutexLockOptions) {
     this.storage = new Storage({
       ...storageOptions,
+      //@ts-ignore
       autoRetry: false,
       maxRetries: 1,
     })
